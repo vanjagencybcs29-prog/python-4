@@ -1,0 +1,16 @@
+# Recursive Fibonacci function
+def fibo(n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return fibo(n - 1) + fibo(n - 2)
+
+# Main program
+n = int(input("Enter a number: "))
+
+if n < 0:
+    print("Sorry, the number you entered is not positive")
+else:
+    print("Fibonacci sequence:")
+    for i in range(n):
+        print(fibo(i), end=" ")
